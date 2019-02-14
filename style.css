@@ -1,0 +1,272 @@
+.prpfile{
+	background: white;
+}
+/*index page style*/
+body{
+	background: aqua;
+	text-align: center;
+}
+#main2{
+	background: pink;
+	margin: 3%;
+	text-align: center;
+	height: 10%;
+	width: 95%;
+	font-size: 60px;
+	border-radius: 4;
+}
+#sub3{
+	background: white;
+	margin:3%;
+	text-align: center;
+	height:10%;
+	width:95%;
+	border-radius: 4;
+}
+
+
+
+
+
+/*form css*/
+body{
+	background: aqua;
+}
+
+.main{
+	background: aqua;
+	display: flex; /* Safari */   
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 4%;
+	margin: 2%;
+
+}
+.sub{
+	background: bisque;
+	margin: 3%;
+	width: 94%;
+	text-align: center;
+	border-radius: 2%;
+	padding: 1%;
+	justify-content: space-around;
+}
+.sub-1{
+	background: orange;
+	text-align: center;
+	width: 42%;
+	justify-content: space-around;
+	margin:3%;
+	border-radius: 4%;
+}
+#button{
+	margin-left: 45%;
+}
+select,input{
+	margin: 1%;
+	width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1px) and (max-width: 400px){
+
+
+
+
+
+
+
+
+
+
+
+
+/*index page style*/
+body{
+	background: aqua;
+	text-align: center;
+}
+#main2{
+	background: green;
+	margin: 3%;
+	text-align: center;
+	height: 10%;
+	width: 95%;
+	font-size: 60px;
+	border-radius: 4;
+}
+#sub3{
+	background: yellow;
+	margin:3%;
+	text-align: center;
+	height:10%;
+	width:95%;
+	border-radius: 4;
+}
+
+
+
+
+
+/*form css*/
+body{
+	background: aqua;
+}
+
+.main{
+	background: aqua;
+	display: flex; /* Safari */   
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 4%;
+	margin: 2%;
+
+}
+.sub{
+	background: bisque;
+	margin: 3%;
+	width: 94%; 
+	text-align: center;
+	border-radius: 2%;
+	padding: 1%;
+	justify-content: space-around;
+}
+.sub-1{
+	background: orange;
+	text-align: center;
+	width: 42%;
+	justify-content: space-around;
+	margin:3%;
+	border-radius: 4%;
+}
+#button{
+	margin-left: 45%;
+}
+select,input{
+	margin: 1%;
+	width: 90%;
+}
+}
+
+@media screen and (min-width: 401px) and (max-width: 700px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*index page style*/
+body{
+	background: aqua;
+	text-align: center;
+}
+#main2{
+	background: pink;
+	margin: 3%;
+	text-align: center;
+	height: 10%;
+	width: 95%;
+	font-size: 60px;
+	border-radius: 4;
+}
+#sub3{
+	background: white;
+	margin:3%;
+	text-align: center;
+	height:10%;
+	width:95%;
+	border-radius: 4;
+}
+
+
+
+
+
+/*form css*/
+body{
+	background: aqua;
+}
+
+.main{
+	background: aqua;
+	display: flex; /* Safari */   
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 4%;
+	margin: 2%;
+
+}
+.sub{
+	background: bisque;
+	margin: 3%;
+	width: 94%;
+	text-align: center;
+	border-radius: 2%;
+	padding: 1%;
+	justify-content: space-around;
+}
+.sub-1{
+	background: orange;
+	text-align: center;
+	width: 42%;
+	justify-content: space-around;
+	margin:3%;
+	border-radius: 4%;
+}
+#button{
+	margin-left: 45%;
+}
+select,input{
+	margin: 1%;
+	width: 90%;
+}}

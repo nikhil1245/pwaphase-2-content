@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="main">
+	<div class="sub">
+		<h1>Carrer Objective</h1>
+		<select id="carrer">
+			<option>select your carrer objective</option>
+			<option>To work in an environment where can i utilized my skills </option>
+		</select>
+	</div >
+	<div class="sub-1">
+		<h1>Personal Details</h1>
+		<input type="text" name="Name" id="name" placeholder="enter your name" required><br>
+		<input type="number" name="Number" id="number" placeholder="enter your mobile number" required><br>
+		<input type="Email" name="Email" id="email" placeholder="enter your email" required><br>
+		
+	</div>
+	<div class="sub-1">
+		<h1>post graduate Details</h1>
+		<h3>select degree</h3>
+		<select id="pdegree" name="pdegree">
+			<option>MCA</option>
+			<option>M Tech</option>
+		</select><br>
+		<input type="text" name="pName" id="pname" placeholder="enter your college name" required><br>
+		<input type="number" name="ppercentage" id="ppercentage" placeholder="enter your percentage" required><br>
+		<input type="text" name="pyear" id="pyear" placeholder="enter your Year of Passing" required><br>
+	</div>
+	<div class="sub-1">
+		<h1>Under graduation Details</h1>
+		<h3>select degree</h3>
+		<select id="udegree" name="udegree">
+			<option>B.Tech</option>
+			<option>B.Com</option>
+			<option>B.sc</option>
+		</select><br>
+		<input type="text" name="uName" id="uname" placeholder="enter your college name" required><br>
+		<input type="number" name="upercentage" id="upercentage" placeholder="enter your percentage" required><br>
+		<input type="text" name="uyear" id="uyear" placeholder="uenter your Year of Passing" required><br>
+	</div>
+	<div class="sub-1">
+		<h1>Intermediate/diplmo details</h1>
+		<h3>select inter details</h3>
+		<select id="idegree" name="idegree">
+			<option>MPC</option>
+			<option>MEC</option>
+			<option>CEC</option>
+			<option>BPC</option>
+		</select><br>
+		<input type="text" name="iName" id="iname" placeholder="enter your college name" required><br>
+		<input type="number" name="ipercentage" id="ipercentage" placeholder="enter your percentage" required><br>
+		<input type="text" name="iyear" id="iyear" placeholder="uenter your Year of Passing" required><br>
+		
+	</div>
+	<div class="sub-1">
+		
+		<h1>SSC Details</h1>
+		<h3>select syllabus type</h3>
+		<select id="sdegree" name="sdegree">
+			<option>state</option>
+			<option>cbsc</option>
+		</select><br>
+		<input type="text" name="SName" id="sname" placeholder="enter your college name" required><br>
+		<input type="number" name="Spercentage" id="spercentage" placeholder="enter your percentage" required><br>
+		<input type="text" name="Syear" id="syear" placeholder="uenter your Year of Passing" required><br>
+	</div>
+</div>
+<button type="button" id="button" onclick="submit()">submit</button>
+</body>
+</html>
+<script type="text/javascript"> 
+	function submit(){
+	var carrer=document.getElementById("carrer").value;
+	var name=document.getElementById("name").value;
+	var number=document.getElementById("number").value;
+	var email=document.getElementById("email").value;
+	var pdegree =document.getElementById("pdegree").value;
+	var pname=document.getElementById("pname").value;
+	var ppercentage=document.getElementById("ppercentage").value;
+	var pyear=document.getElementById("pyear").value;
+	var udegree=document.getElementById("udegree").value;
+	var uname=document.getElementById("uname").value;
+	var upercentage=document.getElementById("upercentage").value;
+	var uyear=document.getElementById("uyear").value;
+	var idegree=document.getElementById("idegree").value;
+	var iname=document.getElementById("iname").value;
+	var ipercentage=document.getElementById("ipercentage").value;
+	var iyear=document.getElementById("iyear").value;
+	var sdegree=document.getElementById("sdegree").value;
+	var sname=document.getElementById("sname").value;
+	var spercentage=document.getElementById("spercentage").value;
+	var syear=document.getElementById("syear").value;
+
+var indexdDB=window.indexedDB || window.mozIndexedDB || window.
+    msIndexedDB || window.webkitIndexedDB;
+    indexedDB? console.log("success") : console.log("error");
+ var store;
+ var open;
+ var result;
+ var tx;
+    var request=indexedDB.open("database",1);
+
+    request.onupgradeneeded = function(e){
+    open = e.target.result;
+    store = open.createObjectStore("resume",{keyPath:"name"});
+   }
+    request.onerror=function(e){
+    	console.log("error");
+ }
+ request.onsuccess=function (e){
+ 	open = e.target.result;
+ 	tx = open.transaction("resume","readwrite");
+ 	store = tx.objectStore("resume");
+ 	store.put({
+ 		carrer:carrer,
+ 		name:name,
+ 		number:number,
+ 		email:email,
+ 		education:[
+ 		{
+ 			 degree:pdegree,
+ 			 name:pname,
+ 			 percentage:ppercentage,
+ 			 year:pyear
+ 		},
+ 		{
+ 			 degree:udegree,
+ 			 name:uname,
+ 			 percentage:upercentage,
+ 			 year:uyear
+ 		},
+ 		{
+ 			degree:idegree,
+ 			name:iname,
+ 			percentage:ipercentage,
+ 			year:iyear
+ 		},
+ 		{
+ 			degree:sdegree,
+ 			nme:sname,
+ 			percentage:spercentage,
+ 			year:syear
+ 		}
+ 		]
+});
+}
+window.open("index.html","_self");
+}
+</script>
